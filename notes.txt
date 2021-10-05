@@ -619,6 +619,12 @@ verify:   git --version
 
 > Summary
     1)   3 steps to put  your changes up to Git server - Add (stage) , commit and push.
+         put all of chages under a folder :
+          cd folder
+          git add -A
+          git commit -mxxxxxx"
+          git push origin main
+
     2)  Github allows you to view files and commit history but not allows you to edit or commit anything 
          through the web interface. Github offers a limited set of functionalities.
 
