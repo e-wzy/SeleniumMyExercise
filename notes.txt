@@ -1,0 +1,688 @@
+<< Selenium Essential Training>>  by Meaghan Lewis
+-----------------------------------------------------------------------------------
+Get set up
+========
+1. Java SE Development Kit ( JDK )
+    > The JDK provides the evnironment to build and run Java propgrams and
+       includes useful tools for developing and testing.
+       ( use Java 1.8 , to explore why)
+2. IntelliJ 
+    >   is a Java integrated development environment
+    >   all tests will be written and run in IntelliJ.
+    >   free for community edition.
+    >   pay for Ultimate version.
+
+3. Chrome and ChromeDriver
+    > All tests will be run in Chrome with the use of ChromeDriver.
+    > ChromeDriver is the browser driver that runs Selenium WebDriver tests in Chrome.
+    > Chromedriver is used to launch and control the Chrome browser. 
+
+4. Maven
+   > is a Java package manager ( or Java dependency manager ) or dependency management tool.
+
+5. Selenium WebDriver
+    > is the Selenium library which provides capabilities for navigating to web page, user input,  find elements etc.
+
+6.Junit
+   > assertion library  ( test  framework)
+      
+WebDriver vs ChromeDriver
+ ~~~~~~~~~~~~~~~~~~~~~~~~
+> ChromeDriver is specifically and only a driver for Chrome. 
+    WebDriver is a generic driver that can be used for many different browsers
+>  All the browser drivers implemented the WebDriver interface.
+  
+ 
+------------------------------------------------------------------------ 
+Selenium Fundamentals
+===============
+Selenium
+~~~~~~~~
+1.  is a powerful framework for testing web applications across multiple browsers and platforms.
+   > it saves fime from constant manual testing.
+      ( 它从不断的手动测试中节省了时间。)
+   > It suipports all major programming languages, platforms and browsers.
+   > Open source
+   > It has a strong community of maintainers and contributors.
+   > It offers WebDriver API for each of the major browsers.
+     the API emulates user action - clicking, typing and interacting with web elements.
+   > W3C specification is about the WebDriver API.
+ 
+2, Selenium IDE 
+    > used to record each interaction of an application as test steps.
+    > The scripts created from the IDE are not maintained or extended 
+       easily over time. This is why to use WebDirver API.
+
+Using Selenium WebDriver
+~~~~~~~~~~~~~~~~~~~~
+1. Goals: 
+   > help developers and testers quickly and easily write automated tests.
+   > Emulate actions of users.
+ 
+2. WebDriver Architecture
+   > use client server communication
+     test script  <->  WebDriver API service sends request  to browser
+                               <-> Browser ( as server) and send response to API and test script.
+  
+3. What is supported
+    > Language - C#, Java, Ruby, Python, JavaScript.
+    > Platforms -  macOS, Windows, Linux.
+    > Browsers - Chrome, Firefox,  IE/Edge, Safari.
+
+Browser Drivers
+~~~~~~~~~~~~~~
+1. Used to run test in WebDriver
+2. Each has an API maintained by the browser vendor.
+3. more information:  www.seleniumhq.org/download.
+4. ChromeDriver
+   > Maintained by Google
+   > Available on Chrome for Android and Desktop
+
+Basic Steps
+~~~~~~~~~
+1. Specify the web driver location.
+2. Create an object of the web driver.
+3. Launch browser and navigate to the URL
+4. Find element.
+5. Assign an element
+6. Perform action and verify behavior or result.
+7. Quit the Driver and closed associated windows..
+
+WebDriver's method
+~~~~~~~~~~~~~~~~
+1. get -  launches a browser session and directs it to the URL specified.  
+     e.g:  driver.get("http://www.google.com");
+
+2.  find element 
+      By.Name,  By.ClassName,  By.CssSelector,  By.Id,  By.Xpath
+
+refer to selenium documnetation web page to know more methods or APIs.
+
+Actions to drive elements on the page.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+type, submit, click, dragAndDrop, keyDown, moveToElement.
+
+
+Inspect Elements
+~~~~~~~~~~~~~~
+> a crucial step in writing  WebDriver test.
+
+------------------------------------------------------------------------------------------------------------------
+Succeed with WebDriver
+==================
+"Build project " is to install any necessary dependencies and make sure the project 
+is built successfully.
+
+
+Test  Website
+~~~~~~~~~~
+https://formy-project.herokuapp.com/
+ > This test application has a collection of form elements and other components.
+
+Automate keyboard and mouse input
+~~~~~~~~~~~~~~~~~~~~~~
+sample code in 02-02
+
+Automate an autocomplete field
+~~~~~~~~~~~~~~~~~~~~~~~
+> Autocomplete page:
+  a series of fields for an address will be populated automatically to complete the page ( or address )
+ after clicking on an option for the first field ( e.g: address) from a list (of addresses).
+
+> Automate  - use keyboard input and mouse input.
+    1. SendKeys: type an address into the first ( main) field, the input should able lead to only one pop up option.
+    2. Click on that pop up result by finding that pack container class then click on it.
+    3. Add waiting time if unable to lcoate an element
+    4. Add exception handler as suggested in the IntelliJ
+              
+Sample code in 02-03.
+
+Scroll to element
+~~~~~~~~~~~~~~~~
+> test website:  https://formy-project.herokuapp.com/scroll
+> when automating a long form on page with lots of contents, it can be necessary to scroll to the element 
+   into view, then send values to it.
+> find this element.
+> move to this element
+     	 Actions actions = new Actions(driver);
+      	 actions.moveToElement(name);
+> send keys as input of this element.
+> Sample code in 02-04.
+
+Switch to active window
+~~~~~~~~~~~~~~~~~~
+> Some applications have multiple windows, frames, and alerts that open on a page.
+> WebDriver assigns each window a unique ID or window handle.
+> Method to switch windows:
+   1. switch to a window - driver.switchTo().window( window handle );
+              String Handle = driver.getWindowHandle();
+              driver.switchTo().window(Handle);
+   2. switch to a frame - driver.switchTo().frame("frameName");
+   3. switch to a pop-up alert.
+> Sample code in 02-05
+> test website:  https://formy-project.herokuapp.com/switch-window
+> the driver is still focusing on the original window when a new window is open.
+   focus is changed by "switchTo" method.
+
+Switch to alert
+~~~~~~~~~~~~
+> import org.openqa.selenium.Alert;
+> use click to open the alert
+> use Alert object to switch to the alert.
+    Alert alert = driver.switchTo().alert();
+> press OK and then close the alert.
+      alert.accept();
+> Sample code in 02-06
+
+Executing JavaScript Commands
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> this command is nessary sometimes in WebDriver tests.
+> JavascriptExecutor 
+  Selenium supports the JavascriptExecutor which provides methods to run JavaScript
+   in the selected window or current page.
+    1. executeAsyncScript:  to execute an asynchronous piece of JavaScript.
+                                        and the scripts must explicitly signal they are finished.
+    
+    2. executeScript : to execute JavaScript as the body of an anonymous function.
+                               (将 JavaScript 作为匿名函数的主体执行。) or
+                               to execute a synchronous script.
+     
+> Use case of JavascriptExecutor
+    1. When WebDriver fails to click on any element due to some issues.
+    2. Generate alerts and run other scripts to trigger actions on a page.
+    3. To perform movement on a page like scrolling and zooming.
+ 
+> Test website: https://formy-project.herokuapp.com/modal
+> Sample code is in 02-07
+
+
+Drag and Drop
+~~~~~~~~~~~~~~
+> For moving images around a screen, or cropping or resizing images.
+> For arranging various components on the screen.
+> Sample code in 02-08.
+> Test website: https://formy-project.herokuapp.com/dragdrop
+> Call the method "drag and drop" in the Action class.
+      Actions actions = new Actions(driver);
+      actions.dragAndDrop(image,box).build().perform(); 
+       	 > drag "image" into "box".
+        	> "build" - build this action "drag and drop"
+        	> "perform" - perform this action.
+
+About Build() method 
+~~~~~~~~~~~~~~~~~
+Generates a composite action containing all actions ( or chain of actions) so far, ready to be performed
+and resets the internal builder state, so subsequent calls to build() will contain fresh sequences.
+
+
+-----------------------------------------------------------------------------------
+Using advanced locators
+======================
+ 
+ways to locate elements
+~~~~~~~~~~~~~~~~~~
+use the following locators:
+> Class name
+> CSS selector
+> ID
+> Link text
+> Name
+> Tag name
+> XPath
+
+The best locators
+~~~~~~~~~~~~~
+> is unique, descriptive, and static or unlikely to change.
+
+Avoid using the following locators
+~~~~~~~~~~~~~~~~~~~~~~~~
+> Link text : may not be unique.
+> Tag name: usually not unique or decriptive.
+> XPath:  definitely not descriptive.
+
+Prefer using locators
+~~~~~~~~~~~~~~~~
+> ID, class, name and CSS selector which are usually unique, descriptive and static.
+
+CSS Selectors
+~~~~~~~~~~~~~~
+> is the most powerful choice in automation test.
+> can be used in conjunction with types of locators.
+> can locate the most hard-to-find elements.
+> Examples
+        HTML
+        <input id="q"  class="q" name="q">
+        
+         a.  find by id - driver.findElement(By.cssSelector('#q'));
+         b.  find by class name - driver.findElement(By.cssSelector('.q'));
+         c.  find by name -  driver.findElement(By.cssSelector("input[name='q']" ));
+
+
+CSS Selector - Combine Multiple Attributes
+~~~~~~~~~~~~~~~~~~~~~
+Define a css selector with multiple attributes to locate elements or describe 
+a unique element.
+
+> Necessary when a web page has many of the same types of elements,
+    and there are no other good options to describe an unique element.
+
+> Tag and class
+     <input class="q"  type="text">
+      driver.findElement(By.cssSelector("input.q")):
+
+>  Tag and ID
+     <input id="q", type="text">
+     driver.findElement(By.cssSelector("input#q")):
+ 
+> Tag and Attribute
+     <input type="radio", value="radio button">
+    where there is no class, ID or name.
+     1. find the element based on tag and its type
+     driver.findElement(By.cssSelector("input[type='radio']")):  
+   
+     2. find the element based on tag and its value
+     driver.findElement(By.cssSelector("input[value='radio button']")):  
+   
+> Multiple Classes
+   < buttom typ="button"  class="Btn btn-lg btn-primary>
+    where there are multiple classes that define the button -
+    button class, button dash large class and button dash primary class.
+
+    to find this button:
+       driver.findElement(By.cssSelector(".btn.btn-lg.btn-success"));
+
+Text matching using CSS selector
+~~~~~~~~~~~~~~~~~~~~~~~~
+When there are no descriptive selectors, matching by text comes to the rescue.
+
+1. by value. 
+    Matches text by exact value of selector.
+    as long as an element has a tag name and a value.
+    eg:  driver.findElement(By.cssSelector("input[type='radio']")
+           or
+           driver.findElement(By.cssSelector("input[value='radio button']")):  
+    
+2.  by wildcard
+     If the element's value is not availabe, then 
+     matches text by wildcard based on a selector or part of selector.
+     
+     > Prefix: a[id^='id_prefix_']
+         <div id="textField_randomId">
+         driver.findElement(By.cssSelector("div[id^='textField']")):  
+        ( ^ - caret )
+    
+     > Suffix:  a[id$='_id_sufix']
+         <div id="randomId_textField">
+         driver.findElement(By.cssSelector("div[id$='textField']")):  
+    
+     > Substring:  a[id*='id_pattern']
+         <div id="123_textField_randomId">
+         driver.findElement(By.cssSelector("div[id*='textField']")): 
+        ( * - asterisk )
+    
+      > Exact match: a[id='id']
+        <div id="textField">
+         driver.findElement(By.cssSelector("div[id='textField']")):  
+
+Using Child Nodes
+~~~~~~~~~~~~~~~~~
+> Using the child node is helpful when it is difficult to
+  find a unique and descriptive locator for an element.
+> Child node
+  it is a node directly under another node.  
+
+   to find a child:
+   ~~~~~~~~~~~~~~~
+    HTML:
+   <div id="parent">
+      <a id="child" href="/child">Child</a>
+   </div>
+
+   driver.findElement(By.cssSelector("div#parent a")); 
+
+> Nth-child
+  one of child nodes.
+
+   HTML:
+   <ul id="list">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul> 
+
+    to find one of the list items such as 2
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    driver.findElement(By.cssSelector("#list li:nth-child(2)"));
+
+----------------------------------------------------------------------------------------------------------
+Interacting with Components
+======================
+Even the most commonly used components on the web can be tricky (棘手的) to automate.
+
+Radio buttons
+~~~~~~~~~~
+>Test website: https://formy-project.herokuapp.com/radiobutton
+
+> Locator selected should be unique between these radio buttons.
+ 
+        to get xpath ( not recommended loactor but if no choice)
+        ~~~~~~~~~~~~  
+         right click element in inspector ->  go to "copy"
+
+> Sample code is in 04-02
+
+
+Date  - key in a date
+~~~~~~~~~~~~~~~~~~
+> Test wesite: https://formy-project.herokuapp.com/datepicker
+> Input a date by send keys
+     dateField.sendKeys("03/03/2020");
+>  Close the Datepicker
+     need to enter RETURN
+      > class "Keys" needed, import the package:
+         import org.openqa.selenium.Keys  
+      > send RETURN key
+         dateField.sendKeys(Keys.RETURN);
+>  Sample code in 04-03 
+
+
+Select an option from Dropdown
+~~~~~~~~~~~~~~~~~~~~~~~~~
+> Test website: https://formy-project.herokuapp.com/dropdown
+> Find dropdown menu element
+   WebElement dropDownMenu = driver.findElement(By.id("dropdownMenuButton"));
+> Open the dropdown menu
+    dropDownMenu.click();
+> Select an option
+   >  Open the dropdown menu -> highlight an option -> right click and inspect it to get locator.
+   >  Find it and clik on it.
+         WebElement autocompleteItem = driver.findElement(By.id("autocomplete"));
+         autocompleteItem.click();
+> Sample code in 04-04
+
+
+File upload
+~~~~~~~~~~~~~~
+>The nice way in Selenium is
+  uses sendKeys to give a file name to "file upload" field to upload instead of using filepicker.
+> In this sample, the file to select is in the test folder together with the test script.
+> ID of the element -"File upload" field is got by using Chrome Developer tool
+> Sample code is in 04-05
+
+-----------------------------------------------------------------------------------------------
+Synchronization Issues
+==================
+
+Why synchronization is an issue
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+>  Tests run fast but sometimes it takes a moment for :
+     page to load,  Actions to finish, Components to appear.
+   
+     which can make a test have unexpected behavior.
+
+>Factors	
+	>   Browser drivers operate at different speeds.
+      	     ChromeDriver and geckodriver are fastest while others are a bit slower.
+	>   There is discrepancy between running test in local macine vs remote or virtual machine.
+	>   Network speed or connectivity.
+     	     pages can be slow to render and this will slow down tests.
+
+> Synchronization Issue
+              > Test gets stuck at a step followed by a No Such Element exception
+                 ( 测试卡在一个步骤)
+                which will failed the test and stop the execution.
+               > An element not found error
+                  1.  The element could not be found by the locator specified at the time of searching for it.    
+                  2. The element is not visible or present on the page at the time of searching for it.
+
+Solution - manage the synchronization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> Adding waits
+    if the locator has been correctly specified, the solution is to add a wait.   
+
+>Wait methods
+
+  1. Implicit waits
+      > Tell WedDriver to wait for a specified amount of time before throwing a no such element exception.
+
+      > Default wait time is 0.
+      > This wait does not depend on a certain element state
+      > Syntax
+          driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); 
+          where wait 5 seconds.
+      > Sample code in 05-02     
+      > Pros - easy to implement, and can be applied to all elements in a script.
+      > Cons - can take up unnecessary time if they are waiting when they do not need to be.
+                    ( 如果他们在不需要等待的时候等待，可能会占用不必要的时间。
+        [ The explaination may not be correct.  
+          from selenium Documentation:
+          An implicit wait is to tell WebDriver to poll the DOM for a certain amount of time when trying to find an element
+          or elements (if) they are not immediately available. 
+          
+          from someone:
+          If the element is already there, then there is no wait time. Thread.sleep() pauses execution no matter what. 
+          if the element is not there, the implicit wait is triggered and that element is polled up to the time specified.            
+          the implicit wait not equal to Thread.sleep(x)
+        ]        
+
+  2. Explicit waits
+     > Wait a specified amount of time for a certain condition to be true.
+     > If the condition is not met in time, an exception is thrown
+     > It will wait for dynamically located elements.
+     > Syntax
+          step 1: define a wait object
+                     WebDriverWait wait = new WebDriverWait(driver, 10);
+                     10 - the max time to wait in seconds.
+
+           step 2: wait for an element to become visible   - expected condition.
+                     WebElement element = 
+                     wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("element"));
+     
+      > Sample code in 05-03  
+      > Other expected conditoins - 
+           elementToBeClickable(), elementToBeSelected(), presenceOfElementLocated()
+           Refer to API documentation at selenium.dev to learn more.
+
+
+      > Pros -
+             1. This explicit wait is intelligent and gives better options than implicit wait.
+             2. Allows flexibility to wait for an element to be in a specific condition.
+             3. They poll for the condition to be true every 500 milliseconds and will likely
+                 not take up any unnecessary time.  
+ 
+----------------------------------------------------------------------------------------------------------
+Automate Form Page
+================
+
+Fill out and Submit
+~~~~~~~~~~~~~~~
+> Select a check box or radio button
+    find the element -> click it.
+           driver.findElement(By.id("radio-button-2")).click();
+           driver.findElement(By.id("checkbox-2")).click()
+
+> Select an option from a dropdown list
+   find the option by css selector  -> click it.
+            driver.findElement(By.cssSelector("option[value='1']")).click();
+
+> Click Submit button defined by multiple classes
+     find it by css selector  -> click it.
+             driver.findElement(By.cssSelector(".btn.btn-lg.btn-primary")).click();
+             where multiple classes form the css selector.
+
+> Sample code in 06-01
+
+Verify or assert  the test result
+~~~~~~~~~~~~~~~~~~~~~~~~
+To confirm the submission is successful.
+
+> Wait for this thanks page to appear
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement alert = wait.until((ExpectedConditions.visibilityOfElementLocated(By.className("alert"))));
+ 
+        this will wait up to 10 seconds for the alert class to br visible.
+
+> Add assertion to confirm result expected.
+          >Use JUnit framewrk - popular test framework for Java project,
+            import static org.junit.Assert.assertEquals;
+
+          >The assertion is to confirm the text displayed is equal to the expected text.
+                       String alertText = alert.getText();
+        	       assertEquals("The form was successfully submitted!", alertText);
+
+> Sample code in 06-02
+
+
+Clean up the test
+~~~~~~~~~~~~~~~
+> Readability of a test is important.
+> Extract similar functionality and behavior into one method.
+   to make the test more clean.
+> Sample code in 06-03
+
+Design Pattern - Page Object Pattern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> Create a class for each page in the application to model its behavior.
+> Create a separation of the test class and its associated code
+      >help to make test clean, readable and maintainable.
+
+> In this sample, create two more classes  
+   FormPage class
+   ConfirmationPage class.
+     > The two classes are put ino directory - page.
+
+> Sample code is in 06-04.
+
+----------------------------------------------------------------------------------------------------------------
+Project Integration
+===============
+
+Connect to GitHub
+~~~~~~~~~~~~~~~~~~~
+1. Connect project to Source Control Repository
+
+> Good for collaboration by allowing project to be shared and worked on with others.
+> Allow integrations with test project.
+    connect the test project to a continuous integration server to run test every time code 
+    changes in the repository.
+
+2. Git 
+
+>download: https://git-scm.com/download
+verify:   git --version
+
+>Create a new  ( or empty) local Git repository ( or reinitialise an existing one) in test ( project ) folder.
+   in command line, go to test directory
+   type:  git init
+
+3. GitHub
+> Create a GitHub account
+   https://github.com/join
+   username: e-wzy
+   password: Yishun756!
+   email: eileen.infosoft@gmail.com
+
+> Creat a new GitHub repository
+   Click on "+" from upper-corner of the GitHub home page.
+   then click on " Creating repository" button.
+
+> Select instructions from "push an existing repository from the command line"
+   
+      > add a remote repository to local repository which will allow me to set up a URL 
+         in a location to send code to GitHub:
+            git remote add origin https://github.com/e-wzy/test-automation.git
+   
+      > print out the location of my remote:
+            git remote -v
+    
+       > git status
+            show all untracked files under the test directory that I must add and commit 
+            or to know what changes made in current directory.
+     
+      > git add --all     ( is - - )
+            to add all the files staged for commit.
+      
+      >  to commit all the files.
+          git config --global user.email "eileen.infosoft@gmail.com" 
+          git config --gloabl user.name "e-wzy"
+          git commit -m "Inital commt"
+       
+      > push up all local changes to the remote in GitHub
+           git push origin main
+
+      > to verify, go to Github
+         all of my files are in the GitHub.  
+
+
+Setup CI
+~~~~~~~~~
+1. Selenimum Grid
+    > it is proxy server as the hub that routes commands to remote browser instances or nodes.
+    > it spreads the load of testing across several machines which can run different browsers 
+       and browser versions, and different platforms as well.
+    
+ 2. Download the Selenium stand alone server (Grid)
+     https://www.selenium.dev/downloads  
+ 
+3. Run in CI
+   > Continuous integration:   
+      It provides continuous feedback that tests are working and 
+      validates the functionality of the application is working as expected.
+   > CI server
+            >Many CI servers integrate well with Selenium WebDriver. 
+            > Recommended CI servers which can run Selenium WebDriver tests:
+               1) CircleCI - is a  cloud service that supports GitHub projects.
+               2) Jenkins - is a open-source CI tool written in Java that can be hosted locally or remotely. 
+                                 and is a cross-platform tool.
+               3) TeamCity - from the JetBrains company which has built IntelliJ.
+               4) Travis CI  - one of the oldest CI servers around, and is a mature solution.
+          
+          > Picking a CI Server consideratons
+            1) Infrastructure cost;  2) The ease of setup;  3) Maintanance needs;  4) Flexibility to run tests.
+              Choosing a CI server is based on the criteria that matter most to you and your team.
+
+
+Cloud-Based Test Tools
+~~~~~~~~~~~~~~~~~~~
+>Offer cross-browser, cross-device and coross-platform testing.
+it is an alternative for building out your own Selenium Grid infrastructure where you do not have to worry about maintaining
+that infrastructure yourself.
+
+>Virtual machines spun up on demand with a certain set of specifications, run tests, and then shutdown.
+
+>Recommended tool - Sauce Labs
+     web:  saucelabs.com
+     > Advantages 
+         1) it supports all major programming languages
+         2) it allows for real device testing in additions to using emulators
+         3) Integrates well with CI server.
+
+     > To Use Sauce Labs.
+         sample
+----------------------------------------------------------------
+Further Learning
+==============
+Refer to documentation at www.selenium.dev
+or https://github.com/SeleniumHQ/selenium/wiki
+
+Contacts
+~~~~~~~
+https://www.linkedin.com/Meaghan Lewis
+
+
+
+
+   
+               
+              
+           
+
+  
+
+
+
+
+
+
+
+
