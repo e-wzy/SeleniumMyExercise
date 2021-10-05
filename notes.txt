@@ -612,6 +612,9 @@ verify:   git --version
 
       > to verify, go to Github
          all of my files are in the GitHub.  
+      
+      > to verify nothing to commit
+         git status
 
 
 Setup CI
