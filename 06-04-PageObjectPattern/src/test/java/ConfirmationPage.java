@@ -7,11 +7,23 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.junit.Assert.assertEquals;
 
 public class ConfirmationPage {
+    //data member
+    private WebDriver driver;
+    private int timeout=10;
+    //locators
+     String alert_classname = "alert";
 
-    public void AssertResult(WebDriver driver) {
+    //constructor
+     ConfirmationPage(WebDriver Driver)
+     {
+         driver =Driver;
+     }
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement alert = wait.until((ExpectedConditions.visibilityOfElementLocated(By.className("alert"))));
+    //method
+    public void AssertResult() {
+
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        WebElement alert = wait.until((ExpectedConditions.visibilityOfElementLocated(By.className(alert_classname))));
 
         String alertText = alert.getText();
         assertEquals("The form was successfully submitted!", alertText);

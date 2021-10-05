@@ -28,11 +28,11 @@ public class Form {
 
         driver.get("https://formy-project.herokuapp.com/form");
 
-        FormPage formPage=new FormPage();
-        formPage.submitForm(driver);
+        FormPage formPage=new FormPage(driver);
+        formPage.submitForm();
 
-        ConfirmationPage cfmPage=new ConfirmationPage();
-        cfmPage.AssertResult(driver);
+        ConfirmationPage cfmPage=new ConfirmationPage(driver);
+        cfmPage.AssertResult();
 
         //The code below is not necessary, just wait a while to observe running result.
         try {
