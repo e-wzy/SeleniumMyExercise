@@ -1,5 +1,7 @@
 << Selenium Essential Training>>  by Meaghan Lewis
 -----------------------------------------------------------------------------------
+sample code 02-02 ~ 06-04.
+
 Get set up
 ========
 1. Java SE Development Kit ( JDK )
