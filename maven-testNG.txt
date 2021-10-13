@@ -1,0 +1,44 @@
+Maven and testNG in IntelliJ
+=====================
+1. Create Maven  project
+2. Add testNG to pom.xml
+   way 1:
+    put cursor on pom file -> go to Code -> generate->Dependency->Search For Artifact.
+    key in testng -> add.
+     wait a while, the dependency will be added.
+
+    way 2: copy from Maven repository to pom file.
+              do not work.   
+    
+refer to https://www.youtube.com/watch?v=PmpA8PtnXAk
+
+3. Add "Run as TestNG" and report
+  
+  go to Run -> Edit configuration > + testNG-> Name : Run as TestNG
+  -> Test kind: class ->Class: select class -> Listener -> Tick "Use default reporters".
+  -> ok.
+   
+   "test-output"  will appear in project folder, which will store test reports.
+
+4.  Create testng.xml - add plugin Create TestNG XML
+    1) add plug in:
+        go to Settings -> Select Plugins -> Search for  Create TestNG XML
+        ->Add it and Tick it.
+     2) right click project folder 
+        Create TestNG XML
+ 
+     Refer to the website: Automation Step by Step.
+        
+    3) Can run from the testNG XML file.
+    
+     4) to generate or update test report
+        go to Run -> Edit Confiurations -> Listeners -> tick "Use default reporters". 
+     
+    5) can just re-run failed test cases
+        run testng-failed.xml
+
+  
+5. Note: 1) to manually add dependency, go to "Project Structure" -> Modules.
+        -> download jar files -> add them to the project.
+         
+        2) In Intelli J, type"sout" , System.out.println will pop up.
