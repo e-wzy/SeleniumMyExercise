@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/00-MyDisk/01-Selenium/00-MyExercise/07-04- TryTestNG-Config">
+        <classes>
+                  <class name="Form">
+                      <methods>
+                        <!--  <include name="setup"/> -->
+                        <!--  <include name="teardown"/> -->
+                          <include name="testOne"/>
+                          <include name="testTwo"/>
+                        <!--  <include name="testThree"/> -->
+                      </methods>
+                  </class>
+        </classes>
+    </test>
+</suite>

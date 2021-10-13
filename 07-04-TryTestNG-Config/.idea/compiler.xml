@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="07-03- GenReport" />
+        <module name="07-02-PageObjectPattern-Maven" />
+        <module name="06-03-CleanCode" />
+        <module name="07-04- TryTestNG-Config" />
+        <module name="07-04-TryTestNG-Config" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
