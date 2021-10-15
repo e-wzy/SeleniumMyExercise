@@ -5,8 +5,8 @@
         <classes>
                   <class name="Form">
                       <methods>
-                        <!--  <include name="setup"/> -->
-                        <!--  <include name="teardown"/> -->
+                        <!--  <include name="setup"/> -->   <!-- still run -->
+                        <!--  <include name="teardown"/> --> <!-- still run -->
                           <include name="testOne"/>
                           <include name="testTwo"/>
                         <!--  <include name="testThree"/> -->
