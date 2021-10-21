@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true" name="C:/00-MyDisk/01-Selenium/00-MyExercise/07-04- TryTestNG-Config">
         <classes>
                   <class name="Form">
-                      <methods>
+                      <methods> <!-- if no method specified, will run all methods -->
                         <!--  <include name="setup"/> -->   <!-- still run -->
                         <!--  <include name="teardown"/> --> <!-- still run -->
                           <include name="testOne"/>
