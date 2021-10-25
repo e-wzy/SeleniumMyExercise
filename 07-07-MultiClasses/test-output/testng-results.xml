@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Test data loaded.]]>
+    </line>
+    <line>
+      <![CDATA[All data entered.]]>
+    </line>
+    <line>
+      <![CDATA[The form submitted.]]>
+    </line>
+    <line>
+      <![CDATA[Confirmation page shown up.]]>
+    </line>
+    <line>
+      <![CDATA[Confirmation page screenshot created.]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2021-10-18T19:20:54 GMT+08:00" name="Default Suite" finished-at="2021-10-18T19:21:10 GMT+08:00" duration-ms="16364">
+    <groups>
+    </groups>
+    <test started-at="2021-10-18T19:20:54 GMT+08:00" name="07-06-ScreenShot" finished-at="2021-10-18T19:21:10 GMT+08:00" duration-ms="16364">
+      <class name="Form">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Form@68c9133c]" started-at="2021-10-18T19:20:54 GMT+08:00" name="setup" finished-at="2021-10-18T19:20:57 GMT+08:00" duration-ms="2924" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testOne()[pri:0, instance:Form@68c9133c]" started-at="2021-10-18T19:20:57 GMT+08:00" name="testOne" finished-at="2021-10-18T19:21:09 GMT+08:00" duration-ms="12494" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test data loaded.]]>
+            </line>
+            <line>
+              <![CDATA[All data entered.]]>
+            </line>
+            <line>
+              <![CDATA[The form submitted.]]>
+            </line>
+            <line>
+              <![CDATA[Confirmation page shown up.]]>
+            </line>
+            <line>
+              <![CDATA[Confirmation page screenshot created.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testOne -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Form@68c9133c]" started-at="2021-10-18T19:21:09 GMT+08:00" name="teardown" finished-at="2021-10-18T19:21:10 GMT+08:00" duration-ms="886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Form -->
+    </test> <!-- 07-06-ScreenShot -->
+  </suite> <!-- Default Suite -->
+</testng-results>

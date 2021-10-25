@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/00-MyDisk/01-Selenium/00-MyExercise/07-07-MUltiClasses">
+        <classes>
+            <class name="Form" >
+                <methods>
+                    <!--include name="testOne"/-->   <!-- run all methods -->
+                </methods>
+            </class>
+            <class name="TestClass4"></class>
+        </classes>
+    </test> <!-- test class1 -->
+
+    <test verbose="2" preserve-order="true" name="Test class 2">
+        <classes>
+            <class name="TestClass2" >
+                <methods>
+                    <include name="TestClass2_Test1"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- test class2 -->
+
+    <test verbose="2" preserve-order="true" name="Test class 3">
+        <classes>
+            <class name="TestClass3" >
+                <methods>
+                    <include name="TestClass3_Test1"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- test class3 -->
+
+</suite>
