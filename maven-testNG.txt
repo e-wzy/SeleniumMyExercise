@@ -42,3 +42,10 @@ refer to https://www.youtube.com/watch?v=PmpA8PtnXAk
         -> download jar files -> add them to the project.
          
         2) In Intelli J, type"sout" , System.out.println will pop up.
+
+-----------------------------------------------------------
+TestNG:
+
+https://www.javatpoint.com/testng-tutorial
+
+
