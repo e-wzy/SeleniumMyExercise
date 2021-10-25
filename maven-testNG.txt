@@ -48,4 +48,5 @@ TestNG:
 
 https://www.javatpoint.com/testng-tutorial
 
-
+@BeforeTest and @AfterTest which have control over the particular folder 
+while @BeforeSuite and @AfterSuite have control over the entire framework.
