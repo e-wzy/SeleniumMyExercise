@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="07-02-PageObjectPattern-Maven" />
+        <module name="07-07-MultiClasses" />
+        <module name="07-08-TestNG-Listener" />
+        <module name="06-03-CleanCode" />
+        <module name="07-05-DDT-Excel" />
+        <module name="07-06-ScreenShot" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
