@@ -48,5 +48,18 @@ TestNG:
 
 https://www.javatpoint.com/testng-tutorial
 
-@BeforeTest and @AfterTest which have control over the particular folder 
-while @BeforeSuite and @AfterSuite have control over the entire framework.
+1) @BeforeTest and @AfterTest which have control over the particular folder 
+2) @BeforeSuite and @AfterSuite have control over the entire framework.
+3) @BeforeClass and The @AfterClass have control over current class.
+4) @BeforeMethod and The @AfterMethod have control over each method in a class.
+    if there are four methods, then the @BeforeMethod or  @AfterMethod  annotated method will be invoked four times
+
+5) Annotation Attributes -  priority:  
+   When no 'priority' attribute is specified then the TestNG will run the test cases in alphabetical order.
+   When the priority is set, the lowest priority test case will run first and the highest priority test case will be executed last.
+  e.g:  @Test(priority=2)  
+
+6) Annotation Attributes -  timeout
+   The timeOut is a time period provided to the test case to completely execute its test case, the test case is marked as fail when timeout happens. 
+   e.g: @Test(timeOut=200)  
+
