@@ -5,7 +5,7 @@
     <listeners>
             <listener class-name="Listener"></listener>
     </listeners>
-    <test verbose="2" preserve-order="true" name="C:/00-MyDisk/01-Selenium/00-MyExercise/07-08-TestNG-Listerner">
+    <test verbose="2" preserve-order="true" name="TestFormSubmission">
         <classes>
             <class name="Form" >
                 <methods>

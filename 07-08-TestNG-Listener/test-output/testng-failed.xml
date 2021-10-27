@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="Listener"/>
   </listeners>
-  <test thread-count="5" name="C:/00-MyDisk/01-Selenium/00-MyExercise/07-08-TestNG-Listerner(failed)">
+  <test thread-count="5" name="TestFormSubmission(failed)">
     <classes>
       <class name="Form">
         <methods>
@@ -14,5 +14,5 @@
         </methods>
       </class> <!-- Form -->
     </classes>
-  </test> <!-- C:/00-MyDisk/01-Selenium/00-MyExercise/07-08-TestNG-Listerner(failed) -->
+  </test> <!-- TestFormSubmission(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->

@@ -17,12 +17,12 @@
       <![CDATA[Confirmation page screenshot created.]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-10-26T19:06:35 GMT+08:00" name="Test Suite" finished-at="2021-10-26T19:06:45 GMT+08:00" duration-ms="9438">
+  <suite started-at="2021-10-27T14:10:24 GMT+08:00" name="Test Suite" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="9458">
     <groups>
     </groups>
-    <test started-at="2021-10-26T19:06:35 GMT+08:00" name="C:/00-MyDisk/01-Selenium/00-MyExercise/07-08-TestNG-Listerner" finished-at="2021-10-26T19:06:45 GMT+08:00" duration-ms="9308">
+    <test started-at="2021-10-27T14:10:24 GMT+08:00" name="TestFormSubmission" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="9317">
       <class name="Form">
-        <test-method signature="testOne()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-26T19:06:36 GMT+08:00" name="testOne" finished-at="2021-10-26T19:06:45 GMT+08:00" duration-ms="9247" status="PASS">
+        <test-method signature="testOne()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-27T14:10:24 GMT+08:00" name="testOne" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="9271" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test data loaded.]]>
@@ -41,7 +41,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- testOne -->
-        <test-method signature="testTwo()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-26T19:06:45 GMT+08:00" name="testTwo" finished-at="2021-10-26T19:06:45 GMT+08:00" duration-ms="2" status="FAIL">
+        <test-method signature="testTwo()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-27T14:10:34 GMT+08:00" name="testTwo" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -88,37 +88,37 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
         </test-method> <!-- testTwo -->
       </class> <!-- Form -->
       <class name="TestClass4">
-        <test-method signature="TestClass4_Test1()[pri:0, instance:TestClass4@1750fbeb]" started-at="2021-10-26T19:06:45 GMT+08:00" name="TestClass4_Test1" finished-at="2021-10-26T19:06:45 GMT+08:00" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestClass4_Test1 -->
-        <test-method signature="TestClass4_Test2()[pri:0, instance:TestClass4@1750fbeb]" started-at="2021-10-26T19:06:45 GMT+08:00" name="TestClass4_Test2" finished-at="2021-10-26T19:06:45 GMT+08:00" duration-ms="1" status="PASS">
+        <test-method signature="TestClass4_Test2()[pri:0, instance:TestClass4@1750fbeb]" started-at="2021-10-27T14:10:34 GMT+08:00" name="TestClass4_Test2" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestClass4_Test2 -->
+        <test-method signature="TestClass4_Test1()[pri:0, instance:TestClass4@1750fbeb]" started-at="2021-10-27T14:10:34 GMT+08:00" name="TestClass4_Test1" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestClass4_Test1 -->
       </class> <!-- TestClass4 -->
-    </test> <!-- C:/00-MyDisk/01-Selenium/00-MyExercise/07-08-TestNG-Listerner -->
-    <test started-at="2021-10-26T19:06:45 GMT+08:00" name="Test class 2" finished-at="2021-10-26T19:06:45 GMT+08:00" duration-ms="8">
+    </test> <!-- TestFormSubmission -->
+    <test started-at="2021-10-27T14:10:34 GMT+08:00" name="Test class 2" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0">
       <class name="TestClass2">
-        <test-method signature="TestClass2_Test1()[pri:0, instance:TestClass2@710636b0]" started-at="2021-10-26T19:06:45 GMT+08:00" name="TestClass2_Test1" finished-at="2021-10-26T19:06:45 GMT+08:00" duration-ms="6" status="PASS">
+        <test-method signature="TestClass2_Test1()[pri:0, instance:TestClass2@6cb107fd]" started-at="2021-10-27T14:10:34 GMT+08:00" name="TestClass2_Test1" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestClass2_Test1 -->
       </class> <!-- TestClass2 -->
     </test> <!-- Test class 2 -->
-    <test started-at="2021-10-26T19:06:45 GMT+08:00" name="Test class 3" finished-at="2021-10-26T19:06:45 GMT+08:00" duration-ms="6">
+    <test started-at="2021-10-27T14:10:34 GMT+08:00" name="Test class 3" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="16">
       <class name="Form">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-26T19:06:29 GMT+08:00" name="setup" finished-at="2021-10-26T19:06:35 GMT+08:00" duration-ms="6726" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-27T14:10:18 GMT+08:00" name="setup" finished-at="2021-10-27T14:10:24 GMT+08:00" duration-ms="6087" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-26T19:06:45 GMT+08:00" name="teardown" finished-at="2021-10-26T19:06:46 GMT+08:00" duration-ms="1345" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-27T14:10:34 GMT+08:00" name="teardown" finished-at="2021-10-27T14:10:35 GMT+08:00" duration-ms="1486" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Form -->
       <class name="TestClass3">
-        <test-method signature="TestClass3_Test1()[pri:0, instance:TestClass3@2de56eb2]" started-at="2021-10-26T19:06:45 GMT+08:00" name="TestClass3_Test1" finished-at="2021-10-26T19:06:45 GMT+08:00" duration-ms="3" status="PASS">
+        <test-method signature="TestClass3_Test1()[pri:0, instance:TestClass3@6f204a1a]" started-at="2021-10-27T14:10:34 GMT+08:00" name="TestClass3_Test1" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestClass3_Test1 -->
