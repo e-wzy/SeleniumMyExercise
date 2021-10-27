@@ -43,11 +43,13 @@ refer to https://www.youtube.com/watch?v=PmpA8PtnXAk
          
         2) In Intelli J, type"sout" , System.out.println will pop up.
 
------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 TestNG:
 
 https://www.javatpoint.com/testng-tutorial
 
+TestNG Annotation:
+~~~~~~~~~~~~~~~
 1) @BeforeTest and @AfterTest which have control over the particular folder 
 2) @BeforeSuite and @AfterSuite have control over the entire framework.
 3) @BeforeClass and The @AfterClass have control over current class.
@@ -62,4 +64,12 @@ https://www.javatpoint.com/testng-tutorial
 6) Annotation Attributes -  timeout
    The timeOut is a time period provided to the test case to completely execute its test case, the test case is marked as fail when timeout happens. 
    e.g: @Test(timeOut=200)  
+
+
+TestNG Listeners:
+~~~~~~~~~~~~~~
+TestNG provides a mechanism Listeners which listens to every event that occurs in a test code (selenium code, appium). 
+
+The Listeners are activated either before the test or after the test case.
+The Listeners are implemented by the ITestListener interface.
 
