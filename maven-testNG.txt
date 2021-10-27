@@ -45,6 +45,9 @@ refer to https://www.youtube.com/watch?v=PmpA8PtnXAk
 
 -----------------------------------------------------------------------------------------------------------
 TestNG:
+~~~~~~~
+TestNG stands for "Testing Next Generation". It is an` automation testing framework used for java programming language
+TestNG consists of all the features of JUnit framework but also contains some more additional features that make TestNG more powerful.
 
 https://www.javatpoint.com/testng-tutorial
 
@@ -64,6 +67,18 @@ TestNG Annotation:
 6) Annotation Attributes -  timeout
    The timeOut is a time period provided to the test case to completely execute its test case, the test case is marked as fail when timeout happens. 
    e.g: @Test(timeOut=200)  
+
+TestNG preconditions annotations
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+@BeforeSuite, @BeforeClass, @BeforeTest, @BeforeMethod.
+
+TestNG postconditions annotations
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+@AfterSuite, @AfterClass, @AfterTest, @AfterMethod.
+
+Test annotation
+~~~~~~~~~~~~~~~~
+@Test
 
 
 TestNG Listeners:
