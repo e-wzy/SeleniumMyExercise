@@ -34,7 +34,6 @@ WebDriver vs ChromeDriver
     WebDriver is a generic driver that can be used for many different browsers
 >  All the browser drivers implemented the WebDriver interface.
   
- 
 ------------------------------------------------------------------------ 
 Selenium Fundamentals
 ===============
