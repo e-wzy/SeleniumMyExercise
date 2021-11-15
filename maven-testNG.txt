@@ -41,7 +41,7 @@ refer to https://www.youtube.com/watch?v=PmpA8PtnXAk
 5. Note: 1) to manually add dependency, go to "Project Structure" -> Modules.
         -> download jar files -> add them to the project.
          
-        2) In Intelli J, type"sout" , System.out.println will pop up.
+        2) In IntelliJ, type"sout" , System.out.println will pop up.
 
 -----------------------------------------------------------------------------------------------------------
 TestNG:
