@@ -16,10 +16,14 @@ import org.testng.annotations.*;
 import static org.testng.Assert.*;
 
 import java.io.IOException;
+import java.nio.file.Path;
 
 public class Form {
     private WebDriver driver;
     private String url= "https://formy-project.herokuapp.com/form";
+    private String workingDir;
+    private String testDataPath;
+    private String testRsltPath;
     //----------------------------;
     // @BeforeTest and @AfterTest which have control over the particular folder not on the entire framework.
     // The tag @BeforeSuite has control over the whole XML file. The tag is the parent of all the test folders
@@ -33,10 +37,13 @@ public class Form {
     //@BeforeTest
     @BeforeSuite
     public void setup(){
-        String pathToChromeDriver = "C:\\00-MyDisk\\01-Selenium\\00-MyExercise\\chromedriver.exe";
 
+        workingDir = Path.of("").toAbsolutePath().toString();
+        testDataPath = workingDir + "\\test-data\\";
+        testRsltPath = workingDir + "\\test-result\\";
+
+        String pathToChromeDriver = workingDir + "\\chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", pathToChromeDriver);
-
         driver = new ChromeDriver();
         driver.get(url);
 
@@ -54,10 +61,10 @@ public class Form {
     @Test
     public void testOne() throws IOException
     {
-        FormPage formPage=new FormPage(driver);
+        FormPage formPage=new FormPage(driver, testDataPath);
         formPage.submitForm();
 
-        ConfirmationPage cfmPage=new ConfirmationPage(driver);
+        ConfirmationPage cfmPage=new ConfirmationPage(driver, testRsltPath);
         cfmPage.AssertResult();
 
         //The code below is not necessary, just wait a while to observe running result.

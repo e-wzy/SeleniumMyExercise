@@ -22,6 +22,7 @@ public class FormPage {
 
     //data member
     private WebDriver  driver;
+    private String test_data_path;
     //locators
     String first_name_id = "first-name";
     String last_name_id = "last-name";
@@ -44,9 +45,10 @@ public class FormPage {
 
 
     //Constructor
-      FormPage ( WebDriver Driver)
+      FormPage ( WebDriver Driver, String testDataPath)
       {
-           driver = Driver;
+          driver = Driver;
+          test_data_path = testDataPath;
       }
 
     //method
@@ -95,7 +97,7 @@ public class FormPage {
 
         //Import excel sheet.
         //File src=new File("C:\\00-MyDisk\\01-Selenium\\00-MyExercise\\07-05-DDT-Excel\\TestData.xlsx");
-        File src=new File("C:\\00-MyDisk\\01-Selenium\\00-MyExercise\\07-05-DDT-Excel\\TestData.xls");
+        File src=new File( test_data_path + "TestData.xls");
 
         // Load the file.
         FileInputStream finput = new FileInputStream(src);

@@ -17,12 +17,12 @@
       <![CDATA[Confirmation page screenshot created.]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-10-27T14:10:24 GMT+08:00" name="Test Suite" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="9458">
+  <suite started-at="2021-11-22T20:18:21 GMT+08:00" name="Test Suite" finished-at="2021-11-22T20:18:33 GMT+08:00" duration-ms="12108">
     <groups>
     </groups>
-    <test started-at="2021-10-27T14:10:24 GMT+08:00" name="TestFormSubmission" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="9317">
+    <test started-at="2021-11-22T20:18:21 GMT+08:00" name="TestFormSubmission" finished-at="2021-11-22T20:18:32 GMT+08:00" duration-ms="11226">
       <class name="Form">
-        <test-method signature="testOne()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-27T14:10:24 GMT+08:00" name="testOne" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="9271" status="PASS">
+        <test-method signature="testOne()[pri:0, instance:Form@6fa51cd4]" started-at="2021-11-22T20:18:21 GMT+08:00" name="testOne" finished-at="2021-11-22T20:18:32 GMT+08:00" duration-ms="10481" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test data loaded.]]>
@@ -41,7 +41,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- testOne -->
-        <test-method signature="testTwo()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-27T14:10:34 GMT+08:00" name="testTwo" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0" status="FAIL">
+        <test-method signature="testTwo()[pri:0, instance:Form@6fa51cd4]" started-at="2021-11-22T20:18:32 GMT+08:00" name="testTwo" finished-at="2021-11-22T20:18:32 GMT+08:00" duration-ms="7" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -52,7 +52,7 @@ at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertTrue(Assert.java:45)
 at org.testng.Assert.assertTrue(Assert.java:55)
-at Form.testTwo(Form.java:74)
+at Form.testTwo(Form.java:81)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -88,37 +88,37 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
         </test-method> <!-- testTwo -->
       </class> <!-- Form -->
       <class name="TestClass4">
-        <test-method signature="TestClass4_Test2()[pri:0, instance:TestClass4@1750fbeb]" started-at="2021-10-27T14:10:34 GMT+08:00" name="TestClass4_Test2" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestClass4_Test2 -->
-        <test-method signature="TestClass4_Test1()[pri:0, instance:TestClass4@1750fbeb]" started-at="2021-10-27T14:10:34 GMT+08:00" name="TestClass4_Test1" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0" status="PASS">
+        <test-method signature="TestClass4_Test1()[pri:0, instance:TestClass4@1750fbeb]" started-at="2021-11-22T20:18:32 GMT+08:00" name="TestClass4_Test1" finished-at="2021-11-22T20:18:32 GMT+08:00" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestClass4_Test1 -->
+        <test-method signature="TestClass4_Test2()[pri:0, instance:TestClass4@1750fbeb]" started-at="2021-11-22T20:18:32 GMT+08:00" name="TestClass4_Test2" finished-at="2021-11-22T20:18:32 GMT+08:00" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestClass4_Test2 -->
       </class> <!-- TestClass4 -->
     </test> <!-- TestFormSubmission -->
-    <test started-at="2021-10-27T14:10:34 GMT+08:00" name="Test class 2" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0">
+    <test started-at="2021-11-22T20:18:33 GMT+08:00" name="Test class 2" finished-at="2021-11-22T20:18:33 GMT+08:00" duration-ms="1">
       <class name="TestClass2">
-        <test-method signature="TestClass2_Test1()[pri:0, instance:TestClass2@6cb107fd]" started-at="2021-10-27T14:10:34 GMT+08:00" name="TestClass2_Test1" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0" status="PASS">
+        <test-method signature="TestClass2_Test1()[pri:0, instance:TestClass2@3de8f619]" started-at="2021-11-22T20:18:33 GMT+08:00" name="TestClass2_Test1" finished-at="2021-11-22T20:18:33 GMT+08:00" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestClass2_Test1 -->
       </class> <!-- TestClass2 -->
     </test> <!-- Test class 2 -->
-    <test started-at="2021-10-27T14:10:34 GMT+08:00" name="Test class 3" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="16">
+    <test started-at="2021-11-22T20:18:33 GMT+08:00" name="Test class 3" finished-at="2021-11-22T20:18:33 GMT+08:00" duration-ms="2">
       <class name="Form">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-27T14:10:18 GMT+08:00" name="setup" finished-at="2021-10-27T14:10:24 GMT+08:00" duration-ms="6087" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Form@6fa51cd4]" started-at="2021-11-22T20:17:59 GMT+08:00" name="setup" finished-at="2021-11-22T20:18:21 GMT+08:00" duration-ms="22395" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Form@6fa51cd4]" started-at="2021-10-27T14:10:34 GMT+08:00" name="teardown" finished-at="2021-10-27T14:10:35 GMT+08:00" duration-ms="1486" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Form@6fa51cd4]" started-at="2021-11-22T20:18:33 GMT+08:00" name="teardown" finished-at="2021-11-22T20:18:35 GMT+08:00" duration-ms="1579" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Form -->
       <class name="TestClass3">
-        <test-method signature="TestClass3_Test1()[pri:0, instance:TestClass3@6f204a1a]" started-at="2021-10-27T14:10:34 GMT+08:00" name="TestClass3_Test1" finished-at="2021-10-27T14:10:34 GMT+08:00" duration-ms="0" status="PASS">
+        <test-method signature="TestClass3_Test1()[pri:0, instance:TestClass3@5f8e8a9d]" started-at="2021-11-22T20:18:33 GMT+08:00" name="TestClass3_Test1" finished-at="2021-11-22T20:18:33 GMT+08:00" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestClass3_Test1 -->

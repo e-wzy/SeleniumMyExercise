@@ -7,7 +7,7 @@ Get set up
 1. Java SE Development Kit ( JDK )
     > The JDK provides the evnironment to build and run Java propgrams and
        includes useful tools for developing and testing.
-       ( use Java 1.8 , to explore why)
+
 2. IntelliJ 
     >   is a Java integrated development environment
     >   all tests will be written and run in IntelliJ.

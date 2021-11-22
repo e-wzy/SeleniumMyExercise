@@ -14,13 +14,16 @@ public class ConfirmationPage {
     //data member
     private WebDriver driver;
     private int timeout=10;
+    private String test_result_path;
+
     //locators
      String alert_classname = "alert";
 
     //constructor
-     ConfirmationPage(WebDriver Driver)
+     ConfirmationPage(WebDriver Driver, String testResultPath)
      {
          driver =Driver;
+         test_result_path = testResultPath;
      }
 
     //method
@@ -46,7 +49,7 @@ public class ConfirmationPage {
         File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
 
         //Copy file to test result folder
-        File DestFile=new File("C:\\00-MyDisk\\01-Selenium\\00-MyExercise\\07-06-ScreenShot\\test-results\\cfmPage.jpg");
+        File DestFile=new File(test_result_path+"cfmPage.jpg");
 
         try
         {
