@@ -88,3 +88,13 @@ TestNG provides a mechanism Listeners which listens to every event that occurs i
 The Listeners are activated either before the test or after the test case.
 The Listeners are implemented by the ITestListener interface.
 
+TestNG assert
+~~~~~~~~~~~~~~
+ import static org.testng.Assert.*;
+1. assertTrue()
+  e.g.: assertTrue(ele.isDisplayed(), "The element is shown up);
+
+2. assertFalse()
+
+3. assertEquals()
+

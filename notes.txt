@@ -97,7 +97,7 @@ WebDriver's method
 2.  find element 
       By.Name,  By.ClassName,  By.CssSelector,  By.Id,  By.Xpath
 
-refer to selenium documnetation web page to know more methods or APIs.
+refer to selenium documentation web page to know more methods or APIs.
 
 Actions to drive elements on the page.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -529,7 +529,10 @@ To confirm the submission is successful.
 
           >The assertion is to confirm the text displayed is equal to the expected text.
                        String alertText = alert.getText();
-        	       assertEquals("The form was successfully submitted!", alertText);
+        	       assertEquals("The form was successfully submitted!", Tr
+
+   [ also use testNG assertion :   import static org.testng.Assert.*;
+                                                assertTrue().  assertEquals()         ]
 
 > Sample code in 06-02
 
